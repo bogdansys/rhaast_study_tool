@@ -40,7 +40,7 @@ def study(course, topic):
     questions = get_questions(course, topic)
     if not questions:
         print(f'No questions found for {topic} in {course}.')
-        questions = get_input('Enter your questions (separated by new lines): ')
+        questions = get_input('A new questions file has been created. Fill it with questions, one on each line, to start study mode ')
         add_questions(course, topic, questions)
         questions = get_questions(course, topic)
     random.shuffle(questions)
